@@ -1,7 +1,8 @@
 # UP X CRASH
 
 A copy of the popular Crash game from the UP-X
-![image](https://github.com/keinsize/upx-crash/assets/118171210/3ffa774d-d842-4188-902e-93991c5ffe2d)
+![image](https://github.com/keinsize/upx-crash/assets/118171210/44cfce5a-8b95-4457-bd89-20c254f1aa8b)
+
 
 ## Technologies Used 
 * [Next.js](https://nextjs.org/) - The React Framework for the Web

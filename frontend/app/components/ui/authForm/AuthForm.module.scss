@@ -1,0 +1,82 @@
+.main {
+	@apply flex-[1] pb-6;
+
+	.form {
+		@apply mx-auto flex max-w-[324px] flex-col px-5;
+
+		> .inputForm {
+			@apply relative mb-3 pb-6;
+
+			&:last-child {
+				@apply mb-0;
+			}
+
+			> div {
+				@apply mt-0;
+			}
+
+			.placeholder {
+				@apply absolute top-1.5 left-4 z-10 text-[10px] font-semibold leading-3 -tracking-[.03em] text-[#787e9e];
+			}
+
+			.error {
+				@apply absolute left-0 top-[46px] rounded bg-[#fe3d3d] py-0.5 px-[5px] text-[10px] uppercase leading-3 -tracking-[.02em] text-[#fff];
+			}
+
+			input {
+				@apply min-h-[27px] w-full rounded bg-[#1e2035] px-4 pt-[13px] pb-0 text-[13px] font-semibold leading-4 -tracking-[.03em] text-white;
+				border: 1px solid #30334d;
+
+				&:focus {
+					border: 1px solid #555872;
+				}
+			}
+
+			> .wrapper-note {
+				@apply absolute right-4 flex -translate-y-1/2 cursor-pointer;
+				top: calc(50% - 12px);
+
+				> .note {
+					@apply opacity-80;
+
+					&:hover {
+						@apply opacity-100;
+					}
+
+					> img {
+						@apply w-[14px];
+					}
+				}
+			}
+		}
+	}
+
+	.wrapper {
+		@apply mx-auto mb-8 flex max-w-[324px] justify-center px-5;
+
+		> .login {
+			@apply relative mt-[18px] w-full rounded-lg py-5 text-center text-sm font-semibold leading-[18px] -tracking-[.03em] text-[#0e1022];
+			background: linear-gradient(89.86deg, #4be 35.19%, #81f8fd);
+
+			&:hover {
+				@apply text-[15px];
+				background: #4be;
+			}
+
+			&::after {
+				@apply absolute left-0 top-[11px] min-h-[100%] w-full opacity-30 blur-[32px];
+				content: '';
+				background: linear-gradient(89.86deg, #4be 35.19%, #81f8fd);
+			}
+		}
+
+		> .create {
+			@apply relative -mt-[17px] w-full rounded-lg border-[1px] border-[#333752] bg-[#262940] py-5 text-center text-sm font-semibold leading-[18px] -tracking-[.03em] text-[#fff];
+
+			&:hover {
+				@apply text-[15px];
+				background: #313550;
+			}
+		}
+	}
+}

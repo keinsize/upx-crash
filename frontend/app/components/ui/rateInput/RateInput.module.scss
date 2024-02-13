@@ -1,0 +1,37 @@
+.item {
+	@apply w-[48%] text-[#55516c];
+
+	> div {
+		@apply relative mt-[10px];
+
+		> input {
+			@apply h-[38px] w-full rounded-[5px] border-none bg-white text-center;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		> .minus,
+		> .plus {
+			@apply absolute top-0 z-10 flex h-full w-[48px] cursor-pointer items-center justify-center bg-[#d4d1e1];
+			transition: all 0.3s;
+
+			> img {
+				@apply w-[11px];
+			}
+		}
+
+		> .minus {
+			left: 0;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+
+		> .plus {
+			right: 0;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+	}
+}

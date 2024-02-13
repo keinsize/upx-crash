@@ -1,0 +1,69 @@
+.container {
+	@apply order-[0] w-[41%] px-[15px];
+
+	> .content {
+		@apply relative;
+
+		> .title {
+			> .count {
+				@apply text-[22px] font-bold text-white;
+			}
+
+			> span {
+				@apply text-[14px] text-[#b4b1e0];
+			}
+		}
+
+		> .wrap {
+			@apply mt-8 max-h-[65vh] min-h-[400px];
+
+			> .list {
+				> .item {
+					@apply flex justify-around border-t-2 border-[#2f2f4b];
+
+					> .user_info,
+					> .bet,
+					> .multiplier,
+					> .profit {
+						@apply mx-[5px] h-[60px] text-[15px] text-white;
+					}
+
+					> .user_info {
+						@apply flex min-w-[40px] flex-nowrap items-center justify-start overflow-hidden;
+
+						> .avatar {
+							@apply h-10 w-10 rounded-full border-2 border-[#64648e] p-0.5;
+							> img {
+								@apply min-h-full min-w-full rounded-full;
+							}
+						}
+
+						> .username {
+							@apply ml-2.5 overflow-hidden text-ellipsis whitespace-nowrap;
+						}
+					}
+
+					> .bet,
+					> .profit {
+						@apply flex items-center;
+					}
+
+					> .multiplier {
+						@apply flex items-center;
+
+						&:after {
+							content: '▲';
+							color: #2288c9;
+							font-size: 14px;
+						}
+					}
+
+					.gold {
+						@apply m-auto block h-[36px] w-[122px] text-center leading-[36px];
+						background: url('/images/gold.png') no-repeat;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,5 @@
+.button {
+	@apply flex min-h-[44px] min-w-[140px] items-center justify-center border-2  px-3 py-2.5 text-xs font-bold uppercase;
+	border-radius: 5px;
+	transition: all 0.2s ease-in-out;
+}

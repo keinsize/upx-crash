@@ -1,0 +1,54 @@
+.sidebar {
+	@apply fixed left-0 z-20 min-h-full w-[72px] bg-[#2c2e47];
+	box-shadow: inset -1px 0 0 0 #2d304a;
+
+	> .wrapper {
+		@apply w-full py-[15px] will-change-transform;
+
+		> .item {
+			@apply mb-[5px] flex justify-center;
+
+			> .link {
+				@apply relative flex h-10 w-[44px] cursor-pointer items-center justify-center rounded-md;
+				transition: all 0.2s ease-in-out;
+
+				&:hover:not(.active) {
+					@apply bg-[#393d5a];
+
+					> .icon {
+						filter: brightness(5);
+					}
+				}
+
+				&:hover > .name {
+					@apply visible opacity-100;
+				}
+
+				> .icon > img {
+					@apply w-6;
+					transition: opacity 0.2s ease-in-out;
+				}
+
+				> .name {
+					@apply invisible absolute top-1/2 left-full -mt-[13px] ml-3 translate-x-[5px] whitespace-nowrap rounded-[3px] bg-[#1fb3d5] py-1.5 px-2 text-sm leading-[14px] text-white opacity-0;
+					transition: all 0.2s ease-in-out;
+
+					&::after {
+						@apply absolute top-1/2 left-0 -mt-1.5 -ml-3;
+						border: 6px solid transparent;
+						border-right-color: #1fb3d5;
+						content: '';
+					}
+				}
+			}
+			> .active {
+				@apply bg-[#1fb3d5];
+				box-shadow: -1px 1px 4px 1px rgba(30, 31, 47, 0.4);
+
+				> .icon {
+					filter: brightness(5);
+				}
+			}
+		}
+	}
+}

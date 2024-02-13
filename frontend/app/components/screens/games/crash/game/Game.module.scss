@@ -1,0 +1,20 @@
+.game {
+	@apply order-1 w-[50%];
+
+	> .chart {
+		@apply relative h-[400px] px-[15px];
+
+		> .timer {
+			@apply absolute top-0 flex h-full w-full items-center justify-center;
+
+			> div {
+				@apply text-[100px] font-bold uppercase;
+				font-family: Roboto Condensed, sans-serif;
+
+				> span:nth-child(2) {
+					@apply ml-7 text-[70px];
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,65 @@
+.menu {
+	@apply mb-8;
+
+	> .wrapper {
+		@apply mx-auto flex max-w-[386px] items-center justify-center rounded-[10px] bg-[#1e2035] p-1.5;
+
+		> .item {
+			@apply flex h-[34px] items-center rounded-lg px-[9px] py-[8px] text-[13px] font-semibold leading-4 -tracking-[.03em] text-[#686d89];
+
+			&:hover:not(.active) {
+				@apply brightness-200;
+			}
+
+			> img {
+				@apply mr-1.5 w-[13px];
+			}
+		}
+
+		> .active {
+			@apply bg-white text-[#0e1022];
+		}
+	}
+}
+
+.main {
+	@apply flex-[1] pb-6;
+
+	> .wrapper {
+		@apply mx-auto mb-8 flex max-w-[324px] justify-center px-5;
+
+		> button {
+			@apply relative w-full rounded-lg py-5 text-center text-sm font-semibold leading-[18px] -tracking-[.03em] text-[#0e1022];
+			background: linear-gradient(89.86deg, #4be 35.19%, #81f8fd);
+
+			&:hover {
+				@apply text-[15px];
+				background: #4be;
+			}
+
+			&::after {
+				@apply absolute left-0 top-[11px] min-h-[100%] w-full opacity-30 blur-[32px];
+				content: '';
+				background: linear-gradient(89.86deg, #4be 35.19%, #81f8fd);
+			}
+		}
+	}
+
+	> .login {
+		@apply text-center text-xs font-semibold leading-[15px] -tracking-[.03em];
+
+		> span {
+			&:nth-child(1) {
+				@apply mr-1.5 text-[#686d89];
+			}
+
+			&:nth-child(2) {
+				@apply cursor-pointer text-white;
+
+				&:hover {
+					@apply text-[#4be];
+				}
+			}
+		}
+	}
+}

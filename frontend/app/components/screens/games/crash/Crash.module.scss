@@ -1,0 +1,4 @@
+.crash {
+	@apply mx-auto flex flex-wrap items-start justify-center;
+	width: clamp(540px, 66%, 1140px);
+}

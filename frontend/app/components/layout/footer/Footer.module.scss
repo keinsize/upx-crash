@@ -1,0 +1,31 @@
+.footer {
+	@apply mt-[60px] mb-10 flex flex-col items-center justify-center;
+	> .logo {
+		transition: opacity 0.2s ease-in-out;
+		order: 1;
+
+		&:hover {
+			@apply opacity-75;
+		}
+
+		> img {
+			@apply w-[100px];
+		}
+	}
+
+	> .methods {
+		@apply order-2 mt-[35px];
+
+		> .title {
+			@apply text-center text-sm uppercase text-white;
+		}
+
+		> .icons {
+			@apply mt-[15px] flex max-w-[320px] flex-wrap items-center justify-center;
+
+			> .icon {
+				@apply mx-1.5 my-2 h-6 w-auto max-w-[72px];
+			}
+		}
+	}
+}

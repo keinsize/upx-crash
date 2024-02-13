@@ -1,0 +1,16 @@
+.container {
+	@apply relative my-[8.5%] mx-[12%] cursor-pointer;
+	transition: opacity 0.2s ease-in-out;
+
+	&:hover {
+		@apply opacity-75;
+	}
+
+	> .logo {
+		@apply h-full w-full;
+	}
+
+	> .cap {
+		@apply absolute -top-[30%] -right-[24%] h-full w-[46%] rotate-[36deg];
+	}
+}

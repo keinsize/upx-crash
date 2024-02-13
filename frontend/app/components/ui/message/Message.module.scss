@@ -1,0 +1,32 @@
+.message {
+	z-index: 999;
+	animation: showMessage 5.5s ease-in-out;
+	max-width: 350px;
+	background: white;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 0.5em;
+	padding: 1em 1.5em;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	margin: 1rem;
+	box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 10px;
+}
+
+@keyframes showMessage {
+	0% {
+		left: -382px;
+	}
+
+	10% {
+		left: 0;
+	}
+
+	90% {
+		left: 0;
+	}
+
+	100% {
+		left: -382px;
+	}
+}

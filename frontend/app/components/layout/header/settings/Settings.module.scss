@@ -1,0 +1,90 @@
+.settings {
+	@apply relative m-1 flex justify-center;
+
+	> div {
+		@apply flex h-[34px] cursor-pointer items-center justify-center border-[1px] border-settings-border;
+
+		transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out;
+
+		&:hover {
+			@apply border-settings-border-hover bg-settings-bg-hover;
+
+			> .current > .arrow {
+				@apply rotate-180 opacity-100;
+			}
+
+			> .dropdown {
+				@apply visible;
+
+				> .content {
+					@apply translate-y-0 opacity-100;
+				}
+			}
+		}
+	}
+
+	> .language {
+		@apply relative pr-2 pl-2.5;
+		border-radius: 17px 0 0 17px;
+
+		> .current {
+			@apply flex items-center justify-center;
+
+			> .flag {
+				@apply ml-0.5 mr-2 w-[19px];
+			}
+
+			> span {
+				@apply text-xs uppercase leading-3 text-[#b4b1e0];
+			}
+
+			> .arrow {
+				@apply ml-[5px] w-2 opacity-40;
+				transition: 0.2s ease-in-out;
+				transition-property: opacity, transform;
+			}
+		}
+
+		> .dropdown {
+			@apply invisible absolute top-full right-0 z-10 pt-2;
+
+			> .content {
+				@apply translate-y-[5px] bg-settings-bg-hover opacity-0;
+				border: 1px solid #3c405d;
+				border-radius: 5px;
+				transition: 0.2s ease-in-out;
+				transition-property: opacity, transform;
+
+				> .item {
+					@apply flex w-full items-center justify-start py-2.5 px-3.5;
+					border-top: 1px solid #3c405d;
+
+					&:first-child {
+						border: 0;
+					}
+
+					&:hover {
+						@apply bg-[#3c405d];
+					}
+
+					> img {
+						@apply w-[19px];
+					}
+
+					> span {
+						@apply ml-2.5 text-[13px] text-[#b4b1e0];
+					}
+				}
+			}
+		}
+	}
+
+	> .sound {
+		@apply -ml-[1px] pr-2.5 pl-2;
+		border-radius: 0 17px 17px 0;
+
+		> img {
+			@apply w-5;
+		}
+	}
+}

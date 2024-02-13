@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply bg-[#1e1f2f];
+	font-family: Montserrat, sans-serif;
+}
+
+img,
+video {
+	width: 100%;
+	max-width: unset;
+}

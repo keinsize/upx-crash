@@ -1,0 +1,26 @@
+.menu {
+	@apply order-1 flex items-center justify-center;
+
+	> .item {
+		@apply relative mx-[15px] flex flex-col items-center justify-center;
+
+		&:hover {
+			> .name {
+				@apply text-menu-item-hover;
+			}
+			> .icon {
+				@apply brightness-150;
+			}
+		}
+
+		> .icon {
+			@apply w-[30px];
+			transition: filter 0.3s ease-in-out;
+		}
+
+		> .name {
+			@apply mt-2 text-[13px] font-bold  uppercase leading-[13px] text-menu-item;
+			transition: color 0.3s ease-in-out;
+		}
+	}
+}

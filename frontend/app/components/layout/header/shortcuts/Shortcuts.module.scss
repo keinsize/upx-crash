@@ -1,0 +1,40 @@
+.shortcuts {
+	@apply flex items-center justify-center;
+
+	> .shortcut {
+		@apply relative mx-1 flex h-[34px] w-[34px] items-center justify-center rounded-full bg-shortcut-item;
+		transition: background 0.2s ease-in-out;
+
+		&:hover {
+			@apply bg-shortcut-item-hover;
+		}
+
+		> img {
+			@apply w-5;
+		}
+	}
+
+	> .cashback {
+		@apply bg-[rgba(124,179,66,.35)];
+
+		> img {
+			@apply h-[26px] w-[26px];
+		}
+
+		&:hover {
+			@apply bg-[#7cb342];
+		}
+	}
+
+	> .ranks {
+		@apply bg-[rgba(3,169,244,.35)];
+
+		&:hover {
+			@apply bg-[#03a9f4];
+		}
+	}
+
+	> .tg > img {
+		@apply -ml-0.5 h-[18px] w-[18px];
+	}
+}

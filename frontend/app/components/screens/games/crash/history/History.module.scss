@@ -1,0 +1,23 @@
+.container {
+	@apply order-2 w-[9%] px-[15px];
+
+	> .block {
+		@apply text-right;
+
+		> .title {
+			@apply text-[17px] leading-4 text-[#9490ba];
+		}
+
+		> .list {
+			@apply flex flex-col-reverse;
+
+			> .item {
+				@apply mt-[15px] h-4;
+
+				> span {
+					@apply text-sm;
+				}
+			}
+		}
+	}
+}

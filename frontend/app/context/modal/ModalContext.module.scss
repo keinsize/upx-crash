@@ -1,0 +1,59 @@
+.background {
+	@apply fixed left-0 top-0 bottom-0 right-0 z-50 flex items-center justify-center overflow-auto bg-[rgba(0,0,0,.6)];
+	animation: openModal 0.15s ease-in;
+
+	@media (max-height: 500px) {
+		@apply block;
+	}
+}
+
+.modal {
+	@apply relative mx-auto h-auto w-[500px] py-5;
+
+	> .form {
+		@apply flex min-h-[436px] min-w-[448px] flex-col rounded-[18px];
+		background: radial-gradient(100% 100% at 50% 0, #232640 0, #202235 100%);
+
+		> .header {
+			@apply relative mb-[18px] min-h-[60px] border-b-2 border-[#30334d] py-[19px] px-[21px] text-white;
+			background: linear-gradient(
+				91.01deg,
+				#1e2035 13.78%,
+				#292d4e 51.78%,
+				#1e2035 88.64%
+			);
+			border-radius: 18px 18px 0 0;
+
+			> .title {
+				@apply absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-[18px] font-semibold leading-[22px];
+			}
+
+			> .close {
+				@apply absolute top-1/2 right-5 -mt-[7px] h-[16px] w-[16px] cursor-pointer opacity-50;
+				background: url(/icons/close.svg) 0 0 no-repeat;
+				transition: all 0.2s;
+
+				&:hover {
+					@apply rotate-[1turn] opacity-100 brightness-[175];
+				}
+			}
+		}
+
+		> .footer {
+			@apply flex border-t-2 border-[#30334d] px-[24px] py-[18px];
+
+			> .text {
+				@apply mx-auto max-w-[386px] text-center text-[11px] leading-[18px] text-[#6f7090];
+			}
+		}
+	}
+}
+
+@keyframes openModal {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
